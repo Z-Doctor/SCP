@@ -1,0 +1,19 @@
+{
+    "overrides": [
+        {"predicate":{"meta": 0},  "model":"scp:block/decoblock1/ctile"},
+        {"predicate":{"meta": 1},  "model":"scp:block/decoblock1/ctileg"},
+        {"predicate":{"meta": 2},  "model":"scp:block/decoblock1/floortile"},
+        {"predicate":{"meta": 3},  "model":"scp:block/decoblock1/wallbottom"},
+        {"predicate":{"meta": 4},  "model":"scp:block/decoblock1/wallmiddle"},
+        {"predicate":{"meta": 5},  "model":"scp:block/decoblock1/walltop"},
+        {"predicate":{"meta": 6},  "model":"scp:block/decoblock1/1162wall"},
+        {"predicate":{"meta": 7},  "model":"scp:block/decoblock1/1162walla"},
+        {"predicate":{"meta": 8},  "model":"scp:block/decoblock1/concrete"},
+        {"predicate":{"meta": 9},  "model":"scp:block/decoblock1/pdfloor"},
+        {"predicate":{"meta": 10},  "model":"scp:block/decoblock1/pdwallbottom"},
+        {"predicate":{"meta": 11},  "model":"scp:block/decoblock1/pdwallmiddle"},
+        {"predicate":{"meta": 12},  "model":"scp:block/decoblock1/pdwalltop"},
+        {"predicate":{"meta": 13},  "model":"scp:block/decoblock1/red"},
+        {"predicate":{"meta": 14},  "model":"scp:block/decoblock1/vent"}
+    ]
+}

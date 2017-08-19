@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "meta=0": { "model":"scp:decoblock3/metalboxa" },
+        "meta=1": { "model":"scp:decoblock3/metalboxb" },
+        "meta=2": { "model":"scp:decoblock3/metalboxc" },
+        "meta=3": { "model":"scp:decoblock3/metalboxd" }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+			"particle": "scp:entity/scp079"
+		},
+        "model": "cube"
+    },
+    "variants": {
+        "normal": [{
+
+        }]
+    }
+}
+

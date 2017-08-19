@@ -1,0 +1,18 @@
+{
+    "overrides": [
+        {"predicate":{"meta": 0},  "model":"scp:block/decoblock2/concretefloor"},
+        {"predicate":{"meta": 1},  "model":"scp:block/decoblock2/downwallbottom"},
+        {"predicate":{"meta": 2},  "model":"scp:block/decoblock2/downwallmiddle"},
+        {"predicate":{"meta": 3},  "model":"scp:block/decoblock2/downwalltop"},
+        {"predicate":{"meta": 4},  "model":"scp:block/decoblock2/medwallbottom"},
+        {"predicate":{"meta": 5},  "model":"scp:block/decoblock2/medwallmiddle"},
+        {"predicate":{"meta": 6},  "model":"scp:block/decoblock2/medwalltop"},
+        {"predicate":{"meta": 7},  "model":"scp:block/decoblock2/mesh"},
+        {"predicate":{"meta": 8},  "model":"scp:block/decoblock2/officewallbottom"},
+        {"predicate":{"meta": 9},  "model":"scp:block/decoblock2/officewallmiddle"},
+        {"predicate":{"meta": 10},  "model":"scp:block/decoblock2/officewalltop"},
+        {"predicate":{"meta": 11},  "model":"scp:block/decoblock2/rockmoss"},
+        {"predicate":{"meta": 12},  "model":"scp:block/decoblock2/thickwall"},
+        {"predicate":{"meta": 13},  "model":"scp:block/decoblock2/wallside"}
+    ]
+}

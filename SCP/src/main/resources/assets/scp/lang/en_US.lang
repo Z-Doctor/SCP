@@ -1,0 +1,74 @@
+itemGroup.tabscp=SCP: Containment Breach
+
+item.mastercard.name=Master Card
+item.level1.name=Key Card
+item.level2.name=Key Card
+item.level3.name=Key Card
+item.level4.name=Key Card
+item.level5.name=Key Card
+item.masterkeycard.name=Key Card
+
+item.itemmedkit.name=First Aid Kit
+
+tile.ctile.name=Ceiling Tile
+tile.ctileg.name=Celing Tile Grate
+tile.floortile.name=Floor Tile
+tile.wallbottom.name=Wall Bottom
+tile.wallmiddle.name=Wall Middle
+tile.walltop.name=Wall Top
+tile.1162wall.name=1162 Wall
+tile.1162walla.name=1162 Wall Hole
+tile.concrete.name=Concrete
+tile.pdfloor.name=Pocket Dimension Floor Tile
+tile.pdwallbottom.name=Pocket Dimension Wall Bottom
+tile.pdwallmiddle.name=Pocket Dimension Wall Middle
+tile.pdwalltop.name=Pocket Dimension Wall Top
+tile.red.name=Blood Stain Concrete
+tile.vent.name=Vent
+
+tile.concretefloor.name=Concrete Floortile.downwallbottom.name=Downw Wall Bottontile.downwallmiddle.name=Downw Wall Middletile.downwalltop.name=Down Wall Top
+tile.medwallbottom.name=Med Wall Bottomtile.medwallmiddle.name=Med Wall Middletile.medwalltop.name=Med Wall Toptile.mesh.name=Meshtile.officewallbottom.name=Office Bottom Walltile.officewallmiddle.name=Office Middle Wall
+tile.officewalltop.name=Office Top Walltile.rockmoss.name=Rock Mosstile.thickwall.name=Thick Walltile.wallside.name=Thick Wall Side
+
+tile.metalboxa.name=Metal Box Atile.metalboxb.name=Metal Box Btile.metalboxc.name=Metal Box Ctile.metalboxd.name=Metal Box D
+
+
+item.NVHelm.name=Night Vision Goggles
+item.GMHelm.name=Gas Mask
+item.RMHelm.name=Riot Mask
+tile.SCP079.name=SCP-079
+tile.SCP895.name=SCP-895
+tile.SCPQuack.name=Anomalous Duck
+tile.DeskSmall.name=Small Desk
+tile.door.name=Door
+tile.door2.name=Door
+
+item.ItemLevelMasterCard.name=Level Master Keycard
+item.ItemMasterCard.name=MasterCard
+item.ItemMedkit.name=First Aid Kit
+item.NVHelm.name=Night Vision Goggles
+item.GMHelm.name=Gas Mask
+item.RMHelm.name=Riot Mask
+tile.SCP079.name=SCP-079
+tile.SCP895.name=SCP-895
+tile.SCPQuack.name=Anomalous Duck
+tile.DeskSmall.name=Small Desk
+tile.door.name=Door
+tile.door2.name=Door
+tile.DecoBlocks.ctile.name=Ceiling Tile
+tile.DecoBlocks.ctileg.name=Celing Tile Grate
+tile.DecoBlocks.vent.name=Vent
+tile.DecoBlocks.static.name=Static
+tile.DecoBlocks.red.name=Red
+tile.DecoBlocks.1162wall.name=1162 Wall
+tile.DecoBlocks.1162walla.name=1162 Wall
+tile.DecoBlocks.concrete.name=Concrete
+
+
+tile.DecoBlocks.wall.name=Cracked Wall
+
+entity.Larry.name=SCP-106
+entity.DClass.name=Class D Personnel
+entity.Sculpture.name=SCP-173
+entity.ShyGuy.name=SCP-096(WIP)
+entity.PlagueDoctor.name=SCP-049

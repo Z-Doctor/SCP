@@ -1,0 +1,16 @@
+[
+{
+  "modid": "scp",
+  "name": "SCP",
+  "description": "Based on SCP:CB",
+  "version": "1.1",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["mariofish"],
+  "credits": "mariofish",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

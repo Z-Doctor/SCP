@@ -1,0 +1,6 @@
+{
+    "parent":"scp:item/keycard/keycard",
+	"textures": {
+        "layer0":"scp:items/keycard/mastercard"
+    }
+}

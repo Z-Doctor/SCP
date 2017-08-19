@@ -1,0 +1,8 @@
+{
+    "overrides": [
+        {"predicate":{"meta": 0},  "model":"scp:block/decoblock3/metalboxa"},
+        {"predicate":{"meta": 1},  "model":"scp:block/decoblock3/metalboxb"},
+        {"predicate":{"meta": 2},  "model":"scp:block/decoblock3/metalboxc"},
+        {"predicate":{"meta": 3},  "model":"scp:block/decoblock3/metalboxd"}
+    ]
+}

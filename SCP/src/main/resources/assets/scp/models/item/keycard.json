@@ -1,0 +1,11 @@
+{
+    "overrides": [
+        {"predicate":{"meta": 0},  "model":"scp:item/keycard/mastercard"},
+        {"predicate":{"meta": 1},  "model":"scp:item/keycard/level1card"},
+        {"predicate":{"meta": 2},  "model":"scp:item/keycard/level2card"},
+        {"predicate":{"meta": 3},  "model":"scp:item/keycard/level3card"},
+        {"predicate":{"meta": 4},  "model":"scp:item/keycard/level4card"},
+        {"predicate":{"meta": 5},  "model":"scp:item/keycard/level5card"},
+        {"predicate":{"meta": 6},  "model":"scp:item/keycard/masterkeycard"}
+    ]
+}

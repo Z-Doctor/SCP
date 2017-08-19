@@ -1,0 +1,18 @@
+{
+    "variants": {
+        "meta=0": { "model":"scp:decoblock2/concretefloor" },
+        "meta=1": { "model":"scp:decoblock2/downwallbottom" },
+        "meta=2": { "model":"scp:decoblock2/downwallmiddle" },
+        "meta=3": { "model":"scp:decoblock2/downwalltop" },
+        "meta=4": { "model":"scp:decoblock2/medwallbottom" },
+        "meta=5": { "model":"scp:decoblock2/medwallmiddle" },
+        "meta=6": { "model":"scp:decoblock2/medwalltop" },
+        "meta=7": { "model":"scp:decoblock2/mesh" },
+        "meta=8": { "model":"scp:decoblock2/officewallbottom" },
+        "meta=9": { "model":"scp:decoblock2/officewallmiddle" },
+        "meta=10": { "model":"scp:decoblock2/officewalltop" },
+        "meta=11": { "model":"scp:decoblock2/rockmoss" },
+        "meta=12": { "model":"scp:decoblock2/thickwall" },
+        "meta=13": { "model":"scp:decoblock2/wallside" }
+    }
+}
