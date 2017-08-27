@@ -8,12 +8,12 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import zdoctor.lazymodder.easy.entity.tile.EasyRotatingTileEntityBlock;
+import zdoctor.lazymodder.easy.blocks.tileentity.EasyRotatingTileEntityBlockWithRender;
 import zdoctor.lazymodder.easy.interfaces.ICustomStateMap;
 import zdoctor.scp.client.render.entity.tile.RenderSCPQuack;
 import zdoctor.scp.entity.tile.TileEntitySCPQuack;
 
-public class BlockSCPQuack extends EasyRotatingTileEntityBlock implements ICustomStateMap {
+public class BlockSCPQuack extends EasyRotatingTileEntityBlockWithRender implements ICustomStateMap {
 	public BlockSCPQuack() {
 		super("BlockSCPQuack", TileEntitySCPQuack.class,  RenderSCPQuack.class, Material.WOOD);
 		setHardness(2.0F);

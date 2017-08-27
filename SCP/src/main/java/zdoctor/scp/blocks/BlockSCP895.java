@@ -8,13 +8,13 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import zdoctor.lazymodder.easy.entity.tile.EasyRotatingTileEntityBlock;
+import zdoctor.lazymodder.easy.blocks.tileentity.EasyRotatingTileEntityBlockWithRender;
 import zdoctor.lazymodder.easy.interfaces.ICustomStateMap;
 import zdoctor.lazymodder.easy.interfaces.INoModel;
 import zdoctor.scp.client.render.entity.tile.RenderSCP895;
 import zdoctor.scp.entity.tile.TileEntitySCP895;
 
-public class BlockSCP895 extends EasyRotatingTileEntityBlock implements ICustomStateMap {
+public class BlockSCP895 extends EasyRotatingTileEntityBlockWithRender implements ICustomStateMap {
 	public BlockSCP895() {
 		super("BlockSCP895", TileEntitySCP895.class, RenderSCP895.class, Material.WOOD);
 		setHardness(2.0F);

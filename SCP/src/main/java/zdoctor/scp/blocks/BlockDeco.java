@@ -1,13 +1,10 @@
 package zdoctor.scp.blocks;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import zdoctor.lazymodder.easy.blocks.EasyMetaBlock;
-import zdoctor.lazymodder.easy.crafting.RecipeBuilder;
 import zdoctor.lazymodder.easy.interfaces.IHaveRecipe;
 
-public class BlockDeco extends EasyMetaBlock implements IHaveRecipe {
+public class BlockDeco extends EasyMetaBlock {
 	static final String[] subBlocks = { "ctile", "ctileg", "floortile", "wallbottom", "wallmiddle", "walltop",
 			"1162wall", "1162walla", "concrete", "pdfloor", "pdwallbottom", "pdwallmiddle", "pdwalltop", "red",
 			"vent" };
@@ -23,10 +20,12 @@ public class BlockDeco extends EasyMetaBlock implements IHaveRecipe {
 		return subBlocks[meta];
 	}
 	
-	@Override
-	public RecipeBuilder getRecipe() throws Exception {
-		RecipeBuilder recipe = new RecipeBuilder(new ItemStack(this)).map("ddd"," a ", "sss").where('d', new ItemStack(Items.DIAMOND)).where('a', Items.APPLE).where('s', Items.STICK).buildShaped();
-		return recipe;
-	}
+//	@Override
+//	public void addRecipeToList(NonNullList<IRecipe> recipeList) throws Exception {
+//		IRecipe recipe = new RecipeBuilder(new ItemStack(this)).map("ddd"," a ", "sss").where('d', new ItemStack(Items.DIAMOND)).where('a', Items.APPLE).where('s', Items.STICK).buildShaped();
+//		recipeList.add(recipe);
+//		IRecipe recipe2 = new RecipeBuilder(new ItemStack(this)).map("das").where('d', new ItemStack(Items.DIAMOND)).where('a', Items.APPLE).where('s', Items.STICK).buildShapeless();
+//		recipeList.add(recipe2);
+//	}
 	
 }

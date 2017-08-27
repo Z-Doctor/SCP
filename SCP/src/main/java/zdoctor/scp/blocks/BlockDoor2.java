@@ -14,13 +14,13 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import zdoctor.lazymodder.easy.entity.tile.EasyDoorTileEntityBlock;
+import zdoctor.lazymodder.easy.blocks.tileentity.EasyDoorTileEntityBlockWithRender;
 import zdoctor.lazymodder.easy.interfaces.ICustomStateMap;
 import zdoctor.scp.client.render.entity.tile.RenderDoor2;
 import zdoctor.scp.entity.tile.TileEntityDoor2;
 import zdoctor.scp.init.ZItems;
 
-public class BlockDoor2 extends EasyDoorTileEntityBlock implements ICustomStateMap {
+public class BlockDoor2 extends EasyDoorTileEntityBlockWithRender implements ICustomStateMap {
 	protected static AxisAlignedBB FULL_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 2.0D, 1.0D);
 
 	protected static AxisAlignedBB TOP_AABB = new AxisAlignedBB(0.0D, 0.95D, 0.0D, 1.0D, 1.0D, 1.0D);
@@ -33,7 +33,7 @@ public class BlockDoor2 extends EasyDoorTileEntityBlock implements ICustomStateM
 	protected static AxisAlignedBB DOOREW_AABB = new AxisAlignedBB(0.7D, 0.0D, 0.1D, 0.4D, 1.0D, 1.1D);
 
 	public BlockDoor2() {
-		super("door2", false, TileEntityDoor2.class, RenderDoor2.class, Material.IRON);
+		super("door2", TileEntityDoor2.class, RenderDoor2.class);
 		setHardness(3.5F);
 		SCPBlock.initBlock(this);
 	}

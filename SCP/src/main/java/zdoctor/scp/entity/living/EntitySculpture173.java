@@ -1,11 +1,19 @@
 package zdoctor.scp.entity.living;
 
+import java.util.List;
+
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.pathfinding.PathFinder;
+import net.minecraft.pathfinding.PathNavigate;
+import net.minecraft.util.EntitySelectors;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class EntitySculpture173 extends EntityMob {
-//	private static final DataParameter<Boolean> SEEN = EntityDataHelper.<Boolean>createKey(EntitySculpture173.class,
-//			DataSerializers.BOOLEAN);
+	// private static final DataParameter<Boolean> SEEN =
+	// EntityDataHelper.<Boolean>createKey(EntitySculpture173.class,
+	// DataSerializers.BOOLEAN);
 
 	// private static final SoundEvent stepSound = new SoundEvent(new
 	// ResourceLocation("scp:mob.0173.step"));
@@ -27,166 +35,204 @@ public class EntitySculpture173 extends EntityMob {
 		// ((PathNavigateGround) this.getNavigator()).setEnterDoors(true);
 	}
 
-//	@Override
-//	protected void applyEntityAttributes() {
-//		super.applyEntityAttributes();
-//		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(9001.0);
-//		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(9000.0);
-//		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(.5);
-//	}
-//
-//	@Override
-//	protected void initEntityAI() {
-//		this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, false) {
-//			@Override
-//			public boolean shouldExecute() {
-//				return !isSeen() && super.shouldExecute();
-//			}
-//
-//			@Override
-//			public boolean shouldContinueExecuting() {
-//				return !isSeen() && super.shouldContinueExecuting();
-//			}
-//
-//		});
-//		this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
-//		// this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D));
-//		// this.tasks.addTask(8, new EntityAIWatchClosest(this,
-//		// EntityPlayer.class, 0));
-//		// this.tasks.addTask(8, new EntityAILookIdle(this));
-//
-//		this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
-//		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-//		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLivingBase.class, -1, false, true,
-//				Predicates.alwaysTrue()) {
-//			@Override
-//			public boolean shouldExecute() {
-//				return !isSeen() && super.shouldExecute();
-//			}
-//
-//			@Override
-//			public boolean shouldContinueExecuting() {
-//				return !isSeen() && super.shouldContinueExecuting();
-//			}
-//
-//		});
-//	}
-//
-//	@Override
-//	protected void entityInit() {
-//		super.entityInit();
-//		this.dataManager.register(SEEN, Boolean.valueOf(false));
-//	}
-//
-//	@Override
-//	protected void playStepSound(BlockPos pos, Block blockIn) {
-//		// this.playSound(stepSound, 0.15f, 1.0f);
-//	}
-//
-//	@Override
-//	public boolean canBePushed() {
-//		return false;
-//	}
-//
-//	@Override
-//	protected boolean canDespawn() {
-//		return false;
-//	}
-//
-//	@Override
-//	public int getTalkInterval() {
-//		return 220;
-//	}
-//
-//	@Override
-//	public float getAIMoveSpeed() {
-//		return super.getAIMoveSpeed();// * 3.0f;
-//	}
-//
-//	@Override
-//	public boolean attackEntityFrom(DamageSource source, float amount) {
-//		return super.attackEntityFrom(source, amount);
-//	}
-//
-//	@Override
-//	public void performHurtAnimation() {
-//	}
-//
-//	@Override
-//	protected void updateAITasks() {
-//		if (this.getAttackTarget() != null && !isSeen()) {
-//			super.updateAITasks();
-//		}
-//	}
-//
-//	public boolean isSeen() {
-//		return this.dataManager.get(SEEN).booleanValue();
-//	}
-//
-//	public void setSeen(boolean seen) {
-//		this.dataManager.set(SEEN, Boolean.valueOf(seen));
-//	}
-//
-//	@Override
-//	public void onUpdate() {
-//		setSeen(canBeSeen());
-//		// this.isJumping = false;
-//		// if (this.getAttackTarget() != null && this.getAttackTarget()
-//		// instanceof EntityPlayer) {
-//		// if (this.isSeen()) {
-//		// this.directLook((EntityPlayer) this.getAttackTarget());
-//		// final float n = 0.0f;
-//		// this.moveForward = n;
-//		// this.moveStrafing = n;
-//		// this.getNavigator().setSpeed(0.0);
-//		// } else {
-//		// this.faceEntity(this.getAttackTarget(), 100.0f, 100.0f);
-//		// final float n2 = 0.23f;
-//		// this.moveForward = n2;
-//		// this.moveStrafing = n2;
-//		// this.getNavigator().setSpeed(0.23);
-//		// }
-//		// }
-//		super.onUpdate();
-//	}
-//
-//	private boolean canBeSeen() {
-//		int i = 0;
-//		List<EntityLivingBase> list = this.world.getEntitiesWithinAABB(EntityLivingBase.class,
-//				this.getEntityBoundingBox().expand(64d, 20d, 64d), new Predicate<EntityLivingBase>() {
-//
-//					@Override
-//					public boolean apply(EntityLivingBase input) {
-//						Iterator<ItemStack> armor = input.getArmorInventoryList().iterator();
-//						while (armor.hasNext()) {
-//							ItemStack stack = armor.next();
-//							if (stack.isItemEqualIgnoreDurability(new ItemStack(Items.DIAMOND_HELMET)))
-//								return false;
-//						}
-//						return true;
-//					}
-//				});
-//
-//		for (EntityLivingBase entity : list) {
-//			if (canSeeMe(entity))
-//				return true;
-//		}
-//		return false;
-//	}
-//
-//	private boolean canSeeMe(EntityLivingBase entityIn) {
-//		RayTraceResult rayTrace = this.world.rayTraceBlocks(
-//				new Vec3d(this.posX, this.posY + (double) this.getEyeHeight(), this.posZ),
-//				new Vec3d(entityIn.posX, entityIn.posY + (double) entityIn.getEyeHeight(), entityIn.posZ), false, true,
-//				false);
-//		if (rayTrace == null)
-//			return false;
-//		if (rayTrace.typeOfHit == Type.BLOCK)
-//			return this.world.getBlockState(rayTrace.getBlockPos()).isTranslucent();
-//		if (rayTrace.typeOfHit == Type.ENTITY)
-//			return true;
-//		return false;
-//	}
+	@Override
+	public void onEntityUpdate() {
+		super.onEntityUpdate();
+		this.motionX = 0;
+		this.motionY = 0;
+		this.motionZ = 0;
+	}
+
+	@Override
+	protected void collideWithEntity(Entity entityIn) {
+		super.collideWithEntity(entityIn);
+	}
+
+	@Override
+	protected void collideWithNearbyEntities() {
+		List<Entity> list = this.world.getEntitiesInAABBexcluding(this, this.getEntityBoundingBox(),
+				EntitySelectors.getTeamCollisionPredicate(this));
+
+		if (!list.isEmpty()) {
+			for (int l = 0; l < list.size(); ++l) {
+				Entity entity = list.get(l);
+				this.collideWithEntity(entity);
+			}
+		}
+	}
+	
+	@Override
+	public boolean canBeCollidedWith() {
+		
+		return super.canBeCollidedWith();
+	}
+
+	// @Override
+	// protected void applyEntityAttributes() {
+	// super.applyEntityAttributes();
+	// this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(9001.0);
+	// this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(9000.0);
+	// this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(.5);
+	// }
+	//
+	// @Override
+	// protected void initEntityAI() {
+	// this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, false) {
+	// @Override
+	// public boolean shouldExecute() {
+	// return !isSeen() && super.shouldExecute();
+	// }
+	//
+	// @Override
+	// public boolean shouldContinueExecuting() {
+	// return !isSeen() && super.shouldContinueExecuting();
+	// }
+	//
+	// });
+	// this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
+	// // this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D));
+	// // this.tasks.addTask(8, new EntityAIWatchClosest(this,
+	// // EntityPlayer.class, 0));
+	// // this.tasks.addTask(8, new EntityAILookIdle(this));
+	//
+	// this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
+	// this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+	// this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this,
+	// EntityLivingBase.class, -1, false, true,
+	// Predicates.alwaysTrue()) {
+	// @Override
+	// public boolean shouldExecute() {
+	// return !isSeen() && super.shouldExecute();
+	// }
+	//
+	// @Override
+	// public boolean shouldContinueExecuting() {
+	// return !isSeen() && super.shouldContinueExecuting();
+	// }
+	//
+	// });
+	// }
+	//
+	// @Override
+	// protected void entityInit() {
+	// super.entityInit();
+	// this.dataManager.register(SEEN, Boolean.valueOf(false));
+	// }
+	//
+	// @Override
+	// protected void playStepSound(BlockPos pos, Block blockIn) {
+	// // this.playSound(stepSound, 0.15f, 1.0f);
+	// }
+	//
+	// @Override
+	// public boolean canBePushed() {
+	// return false;
+	// }
+	//
+	// @Override
+	// protected boolean canDespawn() {
+	// return false;
+	// }
+	//
+	// @Override
+	// public int getTalkInterval() {
+	// return 220;
+	// }
+	//
+	// @Override
+	// public float getAIMoveSpeed() {
+	// return super.getAIMoveSpeed();// * 3.0f;
+	// }
+	//
+	// @Override
+	// public boolean attackEntityFrom(DamageSource source, float amount) {
+	// return super.attackEntityFrom(source, amount);
+	// }
+	//
+	// @Override
+	// public void performHurtAnimation() {
+	// }
+	//
+	// @Override
+	// protected void updateAITasks() {
+	// if (this.getAttackTarget() != null && !isSeen()) {
+	// super.updateAITasks();
+	// }
+	// }
+	//
+	// public boolean isSeen() {
+	// return this.dataManager.get(SEEN).booleanValue();
+	// }
+	//
+	// public void setSeen(boolean seen) {
+	// this.dataManager.set(SEEN, Boolean.valueOf(seen));
+	// }
+	//
+	// @Override
+	// public void onUpdate() {
+	// setSeen(canBeSeen());
+	// // this.isJumping = false;
+	// // if (this.getAttackTarget() != null && this.getAttackTarget()
+	// // instanceof EntityPlayer) {
+	// // if (this.isSeen()) {
+	// // this.directLook((EntityPlayer) this.getAttackTarget());
+	// // final float n = 0.0f;
+	// // this.moveForward = n;
+	// // this.moveStrafing = n;
+	// // this.getNavigator().setSpeed(0.0);
+	// // } else {
+	// // this.faceEntity(this.getAttackTarget(), 100.0f, 100.0f);
+	// // final float n2 = 0.23f;
+	// // this.moveForward = n2;
+	// // this.moveStrafing = n2;
+	// // this.getNavigator().setSpeed(0.23);
+	// // }
+	// // }
+	// super.onUpdate();
+	// }
+	//
+	// private boolean canBeSeen() {
+	// int i = 0;
+	// List<EntityLivingBase> list =
+	// this.world.getEntitiesWithinAABB(EntityLivingBase.class,
+	// this.getEntityBoundingBox().expand(64d, 20d, 64d), new
+	// Predicate<EntityLivingBase>() {
+	//
+	// @Override
+	// public boolean apply(EntityLivingBase input) {
+	// Iterator<ItemStack> armor = input.getArmorInventoryList().iterator();
+	// while (armor.hasNext()) {
+	// ItemStack stack = armor.next();
+	// if (stack.isItemEqualIgnoreDurability(new
+	// ItemStack(Items.DIAMOND_HELMET)))
+	// return false;
+	// }
+	// return true;
+	// }
+	// });
+	//
+	// for (EntityLivingBase entity : list) {
+	// if (canSeeMe(entity))
+	// return true;
+	// }
+	// return false;
+	// }
+	//
+	// private boolean canSeeMe(EntityLivingBase entityIn) {
+	// RayTraceResult rayTrace = this.world.rayTraceBlocks(
+	// new Vec3d(this.posX, this.posY + (double) this.getEyeHeight(),
+	// this.posZ),
+	// new Vec3d(entityIn.posX, entityIn.posY + (double)
+	// entityIn.getEyeHeight(), entityIn.posZ), false, true,
+	// false);
+	// if (rayTrace == null)
+	// return false;
+	// if (rayTrace.typeOfHit == Type.BLOCK)
+	// return this.world.getBlockState(rayTrace.getBlockPos()).isTranslucent();
+	// if (rayTrace.typeOfHit == Type.ENTITY)
+	// return true;
+	// return false;
+	// }
 
 	// private boolean lineOfSightCheck(final EntityLivingBase entity) {
 	// return this.field_70170_p.func_72933_a(
@@ -357,8 +403,8 @@ public class EntitySculpture173 extends EntityMob {
 	// return "scp:mob.0173.say";
 	// }
 
-//	@Override
-//	public int getMaxSpawnedInChunk() {
-//		return 4;
-//	}
+	// @Override
+	// public int getMaxSpawnedInChunk() {
+	// return 4;
+	// }
 }

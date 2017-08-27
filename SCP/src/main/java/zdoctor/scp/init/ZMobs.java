@@ -27,9 +27,6 @@ public class ZMobs {
 		new EasyLivingEntity(EntityLarry106.class, RenderLarry106.class, "Larry", 0, 0);
 		new EasyLivingEntity(EntitySculpture173.class, RenderSculpture173.class, "Sculpture", 0, 0xf0f0f0);
 		
-//		EasyTileEntity.bindTileEntitySpecialRenderer(TileEntitySCP079.class, RenderComputer079.class);
-		
-
 		// ClientRegistry.bindTileEntitySpecialRenderer((Class)TileEntityDoor.class,
 		// (TileEntitySpecialRenderer)new DoorRender());
 		// ClientRegistry.bindTileEntitySpecialRenderer((Class)TileEntityDoorClosed.class,

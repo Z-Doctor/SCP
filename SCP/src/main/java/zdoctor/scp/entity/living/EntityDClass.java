@@ -1,7 +1,10 @@
 package zdoctor.scp.entity.living;
 
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.world.World;
+import zdoctor.lazymodder.builtin.helpers.EntityDataHelper;
 
 public class EntityDClass extends EntityMob {
 //	private static final DataParameter<Boolean> KNOWLEGE_SHYGUY = EntityDataHelper.createKey(EntityDClass.class,

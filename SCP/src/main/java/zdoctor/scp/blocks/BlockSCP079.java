@@ -10,12 +10,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import zdoctor.lazymodder.easy.entity.tile.EasyRotatingTileEntityBlock;
+import zdoctor.lazymodder.easy.blocks.tileentity.EasyRotatingTileEntityBlockWithRender;
 import zdoctor.lazymodder.easy.interfaces.ICustomStateMap;
 import zdoctor.scp.client.render.entity.tile.RenderComputer079;
 import zdoctor.scp.entity.tile.TileEntityComputer079;
 
-public class BlockSCP079 extends EasyRotatingTileEntityBlock implements ICustomStateMap {
+public class BlockSCP079 extends EasyRotatingTileEntityBlockWithRender implements ICustomStateMap {
 	public BlockSCP079() {
 		super("BlockSCP079", TileEntityComputer079.class, RenderComputer079.class, Material.WOOD);
 		setHardness(2.0F);

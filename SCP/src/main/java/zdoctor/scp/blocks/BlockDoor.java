@@ -14,13 +14,13 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import zdoctor.lazymodder.easy.entity.tile.EasyDoorTileEntityBlock;
+import zdoctor.lazymodder.easy.blocks.tileentity.EasyDoorTileEntityBlockWithRender;
 import zdoctor.lazymodder.easy.interfaces.ICustomStateMap;
 import zdoctor.scp.client.render.entity.tile.RenderDoor;
 import zdoctor.scp.entity.tile.TileEntityDoor;
 import zdoctor.scp.init.ZItems;
 
-public class BlockDoor extends EasyDoorTileEntityBlock implements ICustomStateMap {
+public class BlockDoor extends EasyDoorTileEntityBlockWithRender implements ICustomStateMap {
 	protected static AxisAlignedBB FULL_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 2.0D, 1.0D);
 
 	protected static AxisAlignedBB TOP_AABB = new AxisAlignedBB(0.0D, 0.95D, 0.0D, 1.0D, 1.0D, 1.0D);
@@ -33,7 +33,7 @@ public class BlockDoor extends EasyDoorTileEntityBlock implements ICustomStateMa
 	protected static AxisAlignedBB DOOREW_AABB = new AxisAlignedBB(0.7D, 0.0D, 0.1D, 0.4D, 1.0D, 1.1D);
 
 	public BlockDoor() {
-		super("door", false, TileEntityDoor.class, RenderDoor.class, Material.IRON);
+		super("door", TileEntityDoor.class, RenderDoor.class);
 		setHardness(3.5F);
 		SCPBlock.initBlock(this);
 	}
@@ -67,6 +67,7 @@ public class BlockDoor extends EasyDoorTileEntityBlock implements ICustomStateMa
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+		TileEntityDoor te = (TileEntityDoor) source.getTileEntity(pos);
 		if (state.getValue(HALF) == EnumDoorHalf.UPPER)
 			return FULL_AABB.offset(0, -1, 0);
 		return FULL_AABB;
