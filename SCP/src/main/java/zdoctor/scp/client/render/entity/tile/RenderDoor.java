@@ -3,6 +3,7 @@ package zdoctor.scp.client.render.entity.tile;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockDoor.EnumDoorHalf;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -22,6 +23,13 @@ public class RenderDoor extends TileEntitySpecialRenderer {
 		this.modelOpen = new ModelDoorOpen();
 		this.modelClosed = new ModelDoorClosed();
 	}
+	
+	@Override
+	public void renderTileEntityFast(TileEntity te, double x, double y, double z, float partialTicks, int destroyStage,
+			float partial, BufferBuilder buffer) {
+		super.renderTileEntityFast(te, x, y, z, partialTicks, destroyStage, partial, buffer);
+	}
+	
 
 	@Override
 	public void render(TileEntity te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {

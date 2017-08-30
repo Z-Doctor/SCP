@@ -1,0 +1,40 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_column"
+    },
+    "variants": {
+        "facing": {
+            "north": {},
+            "south": {"y": 180},
+            "west":  {"y": 270},
+            "east":  {"y": 90}
+        },
+		"type": {
+			"top": {
+				"textures": {
+					"side": "scp:blocks/walltop",
+					"end": "scp:blocks/wallmiddle"
+				}
+			},
+			"mid": {
+				"textures": {
+					"side": "scp:blocks/wallmiddle",
+					"end": "scp:blocks/wallmiddle"
+				}
+			},
+			"bottom": {
+				"textures": {
+					"side": "scp:blocks/wallbottom",
+					"end": "scp:blocks/wallmiddle"	
+				}
+			},
+			"center": {
+				"textures": {
+					"side": "scp:blocks/wallmiddle",
+					"end": "scp:blocks/wallmiddle"
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "overrides": [
+        {"predicate":{"meta": 0},  "model":"scp:block/decoblock1/wall"}
+    ]
+}

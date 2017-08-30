@@ -2,12 +2,11 @@ package zdoctor.scp.entity.living;
 
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.pathfinding.PathFinder;
-import net.minecraft.pathfinding.PathNavigate;
 import net.minecraft.util.EntitySelectors;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EntitySculpture173 extends EntityMob {
@@ -42,7 +41,7 @@ public class EntitySculpture173 extends EntityMob {
 		this.motionY = 0;
 		this.motionZ = 0;
 	}
-
+	
 	@Override
 	protected void collideWithEntity(Entity entityIn) {
 		super.collideWithEntity(entityIn);
@@ -62,9 +61,30 @@ public class EntitySculpture173 extends EntityMob {
 	}
 	
 	@Override
+	public void applyEntityCollision(Entity entityIn) {
+//		super.applyEntityCollision(entityIn);
+	}
+	
+	@Override
+	public AxisAlignedBB getCollisionBoundingBox() {
+		return Block.FULL_BLOCK_AABB;
+	}
+	
+	@Override
+	public AxisAlignedBB getCollisionBox(Entity entityIn) {
+		return Block.FULL_BLOCK_AABB;
+	}
+	
+	@Override
+	public float getCollisionBorderSize() {
+		// TODO Auto-generated method stub
+		return super.getCollisionBorderSize();
+	}
+	
+	@Override
 	public boolean canBeCollidedWith() {
 		
-		return super.canBeCollidedWith();
+		return false;
 	}
 
 	// @Override

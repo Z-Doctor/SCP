@@ -31,7 +31,7 @@ public class EntityShyGuy096 extends EntityMob {
 	@Override
 	protected void entityInit() {
 		super.entityInit();
-		this.dataManager.register(SCREAMING, Boolean.valueOf(true));
+		this.dataManager.register(SCREAMING, Boolean.valueOf(false));
 	}
 	
 	@Override

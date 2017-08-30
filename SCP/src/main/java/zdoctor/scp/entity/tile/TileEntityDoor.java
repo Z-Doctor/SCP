@@ -3,8 +3,9 @@ package zdoctor.scp.entity.tile;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;
+import zdoctor.lazymodder.easy.entity.tile.EasyTileEntity;
 
-public class TileEntityDoor extends TileEntity {
+public class TileEntityDoor extends EasyTileEntity {
 	private boolean isOpen = false;
 	
 	public boolean isOpen() {
@@ -33,13 +34,8 @@ public class TileEntityDoor extends TileEntity {
 	}
 	
 	@Override
-	public NBTTagCompound getUpdateTag() {
-		return writeToNBT(new NBTTagCompound());
-	}
-	
-	@Override
-	public AxisAlignedBB getRenderBoundingBox() {
-		return super.getRenderBoundingBox();
+	public boolean hasFastRenderer() {
+		return false;
 	}
 	
 }

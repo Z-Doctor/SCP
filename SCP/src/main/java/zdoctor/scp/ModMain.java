@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import zdoctor.scp.proxy.CommonProxy;
 
-@Mod(modid = ModMain.MODID, version = "1.0")
+@Mod(modid = ModMain.MODID, dependencies = "required-after:lazymodder@[0.7,)")
 public class ModMain {
 	public static final String MODID = "scp";
 
